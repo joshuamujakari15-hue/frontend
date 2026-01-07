@@ -1,3 +1,6 @@
+// Initialize EmailJS with your public key
+emailjs.init("eHLEkyfIwoH3R0v33");
+
 const form = document.getElementById("contactForm");
 const status = document.getElementById("status");
 
@@ -14,11 +17,12 @@ form?.addEventListener("submit", async (e) => {
 
   try {
     const res = await emailjs.send(
-      "wouejduldkbcnfdx",   // The service you connected in EmailJS
-      "template_yu8de4k",  // The template you created
-      payload              // Form data
+      "wouejduldkbcnfdx",   // Your EmailJS service ID
+      "template_yu8de4k",   // Your EmailJS template ID
+      payload
     );
 
+    console.log(res); // optional: see response in console
     status.textContent = "✅ Message sent successfully!";
     form.reset();
   } catch (err) {
