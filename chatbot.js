@@ -40,7 +40,8 @@ export function createChat() {
     input.value = "";
 
     // Show temporary "Thinking..."
-    addMessage("ai", "Thinking...");
+    const thinkingMsg = "Thinking...";
+    addMessage("ai", thinkingMsg);
 
     try {
       const payload = { message: text }; // backend expects { message: "..." }
@@ -51,11 +52,16 @@ export function createChat() {
         body: JSON.stringify(payload)
       });
 
+      if (!res.ok) throw new Error("Network response was not OK");
+
       const data = await res.json();
-      body.lastChild.querySelector(".bubble").textContent = data.reply;
+      const lastBubble = body.lastChild.querySelector(".bubble");
+      lastBubble.textContent = data.reply || "I didn’t get a response. Try again.";
     } catch (e) {
-      body.lastChild.querySelector(".bubble").textContent =
+      const lastBubble = body.lastChild.querySelector(".bubble");
+      lastBubble.textContent =
         "Service unavailable. Please contact us directly.";
+      console.error("Chatbot error:", e);
     }
   }
 
