@@ -15,6 +15,11 @@
       JoshWebs
     </a>
 
+    <!-- Hamburger for mobile -->
+    <button class="hamburger" aria-label="Toggle navigation">
+      ☰
+    </button>
+
     <nav>
       <ul class="nav-links">
         <li><a href="about.html">About</a></li>
@@ -22,11 +27,6 @@
         <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="contact.html" class="cta">Contact</a></li>
       </ul>
-
-      <!-- Mobile hamburger -->
-      <button class="hamburger" aria-label="Toggle Menu">
-        ☰
-      </button>
     </nav>
   </div>
 </header>
@@ -72,17 +72,8 @@
   </div>
 </footer>
 
-<!-- JS FILES -->
+<!-- Chatbot -->
 <script type="module" src="chatbot.js"></script>
 <script type="module" src="scripts.js"></script>
-
-<script>
-  // Mobile Hamburger menu toggle
-  const hamburger = document.querySelector(".hamburger");
-  const navLinks = document.querySelector(".nav-links");
-  hamburger?.addEventListener("click", () => {
-    navLinks.classList.toggle("open");
-  });
-</script>
 </body>
 </html>
