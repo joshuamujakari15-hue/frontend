@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>JoshWebs — Web Design & Development</title>
@@ -14,10 +11,10 @@
 <header class="site-header">
   <div class="container nav-container">
     <a href="index.html" class="brand">
-      <img src="assets/logo.png" alt="JoshWebs Logo" width="100" />
-
+      <img src="assets/logo.png" alt="JoshWebs Logo" class="logo" />
       JoshWebs
     </a>
+
     <nav>
       <ul class="nav-links">
         <li><a href="about.html">About</a></li>
@@ -25,6 +22,11 @@
         <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="contact.html" class="cta">Contact</a></li>
       </ul>
+
+      <!-- Mobile hamburger -->
+      <button class="hamburger" aria-label="Toggle Menu">
+        ☰
+      </button>
     </nav>
   </div>
 </header>
@@ -70,7 +72,17 @@
   </div>
 </footer>
 
-<script src="chatbot.js" type="module"></script>
-<script src="scripts.js" type="module"></script>
+<!-- JS FILES -->
+<script type="module" src="chatbot.js"></script>
+<script type="module" src="scripts.js"></script>
+
+<script>
+  // Mobile Hamburger menu toggle
+  const hamburger = document.querySelector(".hamburger");
+  const navLinks = document.querySelector(".nav-links");
+  hamburger?.addEventListener("click", () => {
+    navLinks.classList.toggle("open");
+  });
+</script>
 </body>
 </html>
