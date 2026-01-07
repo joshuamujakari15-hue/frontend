@@ -5,14 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact — JoshWebs</title>
 <link rel="stylesheet" href="styles.css">
+
+<!-- EmailJS SDK -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  emailjs.init("eHLEkyfIwoH3R0v33"); // <-- put your public key here
+</script>
+
+
 </head>
 <body>
 
 <header class="site-header">
   <div class="container nav-container">
     <a href="index.html" class="brand">
-      <img src="assets/logo.png" alt="JoshWebs Logo" width="100" />
-      JoshWebs
+      <span style="font-weight: bold; font-size: 1.2rem;">JoshWebs</span>
     </a>
     <nav>
       <ul class="nav-links">
@@ -32,57 +39,38 @@
   </section>
 
   <section class="glass" style="padding: 40px; margin-top: 40px; border-radius: 16px;">
-    <!-- ✅ UPDATED FORM ID -->
     <form id="contactForm">
 
       <div style="margin-bottom: 20px;">
         <label style="display: block; font-weight: 600; margin-bottom: 6px;">Name</label>
-        <!-- ✅ ID ADDED -->
         <input id="name" type="text" required
           style="width: 100%; padding: 12px; border-radius: 12px; border: 1px solid var(--border);">
       </div>
 
       <div style="margin-bottom: 20px;">
         <label style="display: block; font-weight: 600; margin-bottom: 6px;">Email</label>
-        <!-- ✅ ID ADDED -->
         <input id="email" type="email" required
           style="width: 100%; padding: 12px; border-radius: 12px; border: 1px solid var(--border);">
       </div>
 
       <div style="margin-bottom: 20px;">
         <label style="display: block; font-weight: 600; margin-bottom: 6px;">Message</label>
-        <!-- ✅ ID ADDED -->
         <textarea id="message" required rows="6"
           style="width: 100%; padding: 12px; border-radius: 12px; border: 1px solid var(--border);"></textarea>
       </div>
 
       <button type="submit" class="btn primary">Send</button>
 
-      <!-- ✅ STATUS MESSAGE -->
       <p id="status" class="form-status" role="status" aria-live="polite"
          style="margin-top: 12px; color: var(--secondary); font-weight: 500;"></p>
 
-         
-
-
     </form>
-    <a
-  href="https://wa.me/message/LQB52JQCSCF7I1"
-  target="_blank"
-  class="btn whatsapp"
-  style="
-    display:inline-block;
-    margin-top:20px;
-    background:#25D366;
-    color:#fff;
-    padding:12px 20px;
-    border-radius:12px;
-    text-decoration:none;
-    font-weight:600;
-  "
->
-  💬 Chat with us on WhatsApp
-</a>
+
+    <a href="https://wa.me/message/LQB52JQCSCF7I1" target="_blank"
+       class="btn whatsapp"
+       style="display:inline-block; margin-top:20px; background:#25D366; color:#fff; padding:12px 20px; border-radius:12px; text-decoration:none; font-weight:600;">
+       💬 Chat with us on WhatsApp
+    </a>
 
   </section>
 </main>
@@ -95,13 +83,12 @@
   </div>
 </footer>
 
-<!-- JS FILES -->
+<!-- Chatbot -->
 <script src="chatbot.js" type="module"></script>
-<script src="scripts.js"></script>
+<!-- Contact Form Script -->
+<script src="scripts.js" type="module"></script>
+
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-
-
 
 </body>
 </html>
