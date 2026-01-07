@@ -1,26 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JoshWebs — Web Design & Development</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JoshWebs — Web Design & Development</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <header class="site-header">
   <div class="container nav-container">
-    <a href="index.html" class="brand">
-      <img src="assets/logo.png" alt="JoshWebs Logo" class="logo" />
-      JoshWebs
-    </a>
+    <!-- Text-based logo -->
+    <a href="index.html" class="brand">JoshWebs</a>
 
-    <!-- Hamburger for mobile -->
-    <button class="hamburger" aria-label="Toggle Menu">☰</button>
-
+    <!-- Navigation -->
     <nav>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="portfolio.html">Portfolio</a></li>
@@ -31,7 +26,6 @@
 </header>
 
 <main class="container">
-  <!-- Hero Section -->
   <section class="hero">
     <h1>Modern Web Experiences, Built for Your Community</h1>
     <p>
@@ -44,7 +38,6 @@
     </div>
   </section>
 
-  <!-- About / Overview -->
   <section class="about-overview">
     <h2>Why Choose JoshWebs?</h2>
     <ul>
@@ -55,7 +48,6 @@
     </ul>
   </section>
 
-  <!-- CTA Section -->
   <section class="cta-overview">
     <h2>Ready to Start Your Project?</h2>
     <p>Tell us about your goals, and we’ll create a website that works for your audience and strengthens your brand.</p>
@@ -74,9 +66,8 @@
   </div>
 </footer>
 
-<!-- Chat Widget -->
-<script type="module" src="chatbot.js"></script>
-<!-- Main JS -->
-<script type="module" src="scripts.js"></script>
+<!-- JS FILES -->
+<script src="chatbot.js" type="module"></script>
+<script src="scripts.js" type="module"></script>
 </body>
 </html>
